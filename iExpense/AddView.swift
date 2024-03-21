@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AddView: View {
-    @ObservedObject var expenses: Expenses
+    @Environment(\.modelContext) var modelContext
     @Environment(\.dismiss) var dismiss
     
     @State private var name = ""
@@ -18,6 +18,7 @@ struct AddView: View {
     let types = ["Business", "Personal"]
     
     var body: some View {
+        
         NavigationView {
             Form {
                 TextField("Name", text: $name)
@@ -28,25 +29,37 @@ struct AddView: View {
                     }
                 }
                 
-                TextField("Amount", value: $amount, format: .currency(code: "USD"))
+                TextField("Amount", value: $amount, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
                     .keyboardType(.decimalPad)
-            }
-            .navigationTitle("Add New Expense")
-            
-            .toolbar {
-                Button("Save") {
-                    let item = ExpenseItem(name: name, type: type, amount: amount)
-                    expenses.items.append(item)
+                
+                Button("Done") {
                     dismiss()
                 }
-                
             }
+            
+            .navigationTitle("Add Expense")
+            .onDisappear {
+                
+                guard !name.isEmpty, !type.isEmpty, !amount.isZero else { return }
+                let item = ExpenseItem(name: name, type: type, amount: amount)
+                modelContext.insert(item)
+            }
+            
+//            .toolbar {
+//                Button("Save") {
+//                    let item = ExpenseItem(name: name, type: type, amount: amount)
+//                    expenses.items.append(item)
+//                    dismiss()
+//                }
+//
+//            }
         }
+        
     }
 }
 
 struct AddView_Previews: PreviewProvider {
     static var previews: some View {
-        AddView(expenses: Expenses())
+        AddView()
     }
 }

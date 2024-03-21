@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BCE05B892BACC3D200DAE491 /* ExpensesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE05B882BACC3D200DAE491 /* ExpensesListView.swift */; };
 		F11B22C02A96F1A4001AF3AF /* ExpenseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11B22BF2A96F1A4001AF3AF /* ExpenseItem.swift */; };
 		F11B22C22A96F274001AF3AF /* Expenses.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11B22C12A96F274001AF3AF /* Expenses.swift */; };
 		F11B22C42A96F8D8001AF3AF /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11B22C32A96F8D8001AF3AF /* AddView.swift */; };
+		F11B22CA2A9EFDA8001AF3AF /* ExpenseRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11B22C92A9EFDA8001AF3AF /* ExpenseRow.swift */; };
 		F152F9992A8AE8C900077E3C /* iExpenseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F152F9982A8AE8C900077E3C /* iExpenseApp.swift */; };
 		F152F99B2A8AE8C900077E3C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F152F99A2A8AE8C900077E3C /* ContentView.swift */; };
 		F152F99D2A8AE8CB00077E3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F152F99C2A8AE8CB00077E3C /* Assets.xcassets */; };
@@ -17,9 +19,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BCE05B882BACC3D200DAE491 /* ExpensesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesListView.swift; sourceTree = "<group>"; };
 		F11B22BF2A96F1A4001AF3AF /* ExpenseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseItem.swift; sourceTree = "<group>"; };
 		F11B22C12A96F274001AF3AF /* Expenses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expenses.swift; sourceTree = "<group>"; };
 		F11B22C32A96F8D8001AF3AF /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
+		F11B22C92A9EFDA8001AF3AF /* ExpenseRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseRow.swift; sourceTree = "<group>"; };
 		F152F9952A8AE8C900077E3C /* iExpense.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iExpense.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F152F9982A8AE8C900077E3C /* iExpenseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iExpenseApp.swift; sourceTree = "<group>"; };
 		F152F99A2A8AE8C900077E3C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -59,10 +63,12 @@
 			children = (
 				F152F9982A8AE8C900077E3C /* iExpenseApp.swift */,
 				F11B22BF2A96F1A4001AF3AF /* ExpenseItem.swift */,
-				F11B22C12A96F274001AF3AF /* Expenses.swift */,
 				F152F99A2A8AE8C900077E3C /* ContentView.swift */,
+				BCE05B882BACC3D200DAE491 /* ExpensesListView.swift */,
 				F11B22C32A96F8D8001AF3AF /* AddView.swift */,
+				F11B22C92A9EFDA8001AF3AF /* ExpenseRow.swift */,
 				F152F99C2A8AE8CB00077E3C /* Assets.xcassets */,
+				F11B22C12A96F274001AF3AF /* Expenses.swift */,
 				F152F99E2A8AE8CB00077E3C /* Preview Content */,
 			);
 			path = iExpense;
@@ -104,7 +110,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1400;
-				LastUpgradeCheck = 1400;
+				LastUpgradeCheck = 1520;
 				TargetAttributes = {
 					F152F9942A8AE8C900077E3C = {
 						CreatedOnToolsVersion = 14.0.1;
@@ -147,6 +153,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F11B22C22A96F274001AF3AF /* Expenses.swift in Sources */,
+				BCE05B892BACC3D200DAE491 /* ExpensesListView.swift in Sources */,
+				F11B22CA2A9EFDA8001AF3AF /* ExpenseRow.swift in Sources */,
 				F152F99B2A8AE8C900077E3C /* ContentView.swift in Sources */,
 				F11B22C42A96F8D8001AF3AF /* AddView.swift in Sources */,
 				F11B22C02A96F1A4001AF3AF /* ExpenseItem.swift in Sources */,
@@ -193,6 +201,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -253,6 +262,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -287,6 +297,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -316,6 +327,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
